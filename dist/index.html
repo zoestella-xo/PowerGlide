@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="PowerGlide Premier Auto Service Center — diagnostics, repairs, maintenance and automotive parts."
+    />
+    <title>PowerGlide — Premier Auto Service Center</title>
+    <!-- Inter is the typeface used throughout the Figma design (weights 400–900). -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" crossorigin src="/assets/index-XKZQTPam.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CU5vgdy6.css">
+  </head>
+  <body>
+    <!--
+      Netlify Forms detection: Netlify scans this built HTML for forms and creates
+      an inbox for each. The real forms are React components that POST here with a
+      matching `form-name` (see src/utils/submitForm.ts). Field names MUST match
+      what the pages send. Do not remove.
+    -->
+    <form name="service-request" data-netlify="true" hidden>
+      <input name="reference" /><input name="service" /><input name="make" /><input name="model" />
+      <input name="year" /><input name="date" /><input name="time" /><input name="handover" />
+      <input name="name" /><input name="phone" /><input name="email" /><textarea name="notes"></textarea>
+    </form>
+    <form name="order-request" data-netlify="true" hidden>
+      <input name="reference" /><textarea name="parts"></textarea><input name="subtotal" />
+      <input name="make" /><input name="model" /><input name="year" /><input name="fulfilment" />
+      <input name="name" /><input name="phone" /><input name="email" /><textarea name="notes"></textarea>
+    </form>
+    <form name="enquiry" data-netlify="true" hidden>
+      <input name="reference" /><input name="name" /><input name="phone" /><input name="email" />
+      <input name="topic" /><textarea name="message"></textarea>
+    </form>
+    <div id="root"></div>
+  </body>
+</html>

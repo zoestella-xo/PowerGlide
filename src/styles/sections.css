@@ -1,0 +1,91 @@
+/* ==========================================================================
+   HOMEPAGE SECTIONS — mobile-first; layouts expand at 1024px (desktop frame).
+   ========================================================================== */
+
+/* ---- Hero --------------------------------------------------------------- */
+.hero__composition { display: flex; flex-direction: column; gap: 32px; padding-block: 32px 40px; }
+.hero__copy { display: flex; flex-direction: column; gap: 24px; min-width: 0; }
+.hero h1 span { display: inline; }
+.hero__lead { max-width: 560px; }
+.hero__actions { display: flex; flex-wrap: wrap; gap: 12px; }
+.hero__help { font-size: 15px; font-weight: 600; }
+.hero__help-link { display: inline-flex; align-items: center; gap: 4px; color: var(--color-gold); transition: color .15s; }
+.hero__help-link:hover { color: #fff; }
+
+.hero__routes { display: flex; flex-direction: column; gap: 10px; }
+.route-card { display: flex; align-items: center; gap: 14px; padding: 14px; background: #2a1b14; border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-md); transition: border-color .15s, background-color .15s, transform .1s; }
+.route-card:hover { border-color: var(--color-gold); background: #33231a; }
+.route-card:active { transform: scale(.99); }
+.route-card__icon { display: grid; place-items: center; width: 36px; height: 36px; flex: none; background: var(--color-gold); color: var(--color-ink); border-radius: var(--radius-sm); }
+.route-card__text { display: flex; flex-direction: column; gap: 2px; font-size: var(--fs-sm); color: var(--color-on-dark); }
+.route-card__text strong { color: #fff; font-size: var(--fs-base); }
+
+.hero__visual { display: flex; flex-direction: column; gap: 16px; margin: 0; }
+.hero__photo { height: 260px; border-radius: var(--radius-2xl); }
+.hero__caption { display: flex; justify-content: space-between; gap: 12px; font-size: var(--fs-xs); font-weight: 600; color: var(--color-on-dark); }
+.hero__caption-brand { color: var(--color-gold); font-weight: 400; }
+
+.hero__strip { border-top: 1px solid var(--color-border-dark); }
+.hero__disciplines { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding-block: 20px; font-weight: 600; color: var(--color-on-dark); }
+
+.hero__eyebrow { display: block; }
+@media (min-width: 1024px) {
+  .hero__composition { flex-direction: row; align-items: center; gap: 56px; padding-block: 72px 48px; }
+  .hero__copy { flex: 1; }
+  .hero__eyebrow, .hero__routes { display: none; }
+  .hero h1 span { display: block; }
+  .hero__visual { width: 608px; flex: none; }
+  .hero__photo { height: 480px; }
+  .hero__disciplines { padding-block: 24px; }
+}
+@media (min-width: 640px) and (max-width: 1023px) { .hero__photo { height: 380px; } }
+
+/* ---- Value proposition -------------------------------------------------- */
+.value { display: flex; flex-direction: column; gap: 24px; }
+@media (min-width: 1024px) { .value { flex-direction: row; gap: 48px; } .value__statement { flex: 1; } .value__promise { width: 500px; } }
+
+/* ---- Services overview -------------------------------------------------- */
+.services-overview { display: flex; flex-direction: column; gap: 32px; }
+.services-overview__photo { height: 260px; border-radius: var(--radius-xl); }
+.services-overview__list { display: grid; grid-template-columns: 1fr; flex: 1; align-content: start; }
+.service-summary { display: flex; flex-direction: column; gap: 12px; height: 100%; padding-block: 24px; border-top: 1px solid var(--color-border); transition: border-color .15s; }
+.service-summary:hover { border-top-color: var(--color-ink); }
+.service-summary:hover .service-summary__link { text-decoration: underline; text-underline-offset: 4px; }
+.service-summary p { font-size: 15px; }
+.service-summary__link { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-sm); font-weight: 700; }
+@media (min-width: 640px) { .services-overview__list { grid-template-columns: 1fr 1fr; column-gap: 32px; } }
+@media (min-width: 1024px) {
+  .services-overview { flex-direction: row; gap: 32px; }
+  .services-overview__spotlight { width: 420px; flex: none; }
+  .services-overview__photo { height: 368px; }
+}
+
+/* ---- Why PowerGlide ----------------------------------------------------- */
+.why { display: flex; flex-direction: column; gap: 32px; }
+.why__list { display: grid; gap: 32px; grid-template-columns: 1fr; }
+.why__n { font-size: var(--fs-sm); font-weight: 700; }
+@media (min-width: 768px) { .why__list { grid-template-columns: repeat(3, 1fr); } }
+@media (min-width: 1024px) { .why { flex-direction: row; gap: 48px; } .why__heading { width: 350px; flex: none; } .why__list { flex: 1; } }
+
+/* ---- How it works ------------------------------------------------------- */
+.steps { display: grid; gap: 32px; grid-template-columns: 1fr; }
+.steps__n { font-size: clamp(2rem, 1.5rem + 1.6vw, 2.375rem); font-weight: 800; color: var(--color-gold); line-height: 1.1; }
+@media (min-width: 768px) { .steps { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---- About teaser ------------------------------------------------------- */
+.about-teaser { display: flex; flex-direction: column; gap: 32px; }
+.about-teaser__photo { height: 280px; border-radius: var(--radius-xl); }
+@media (min-width: 1024px) { .about-teaser { flex-direction: row; align-items: center; gap: 56px; } .about-teaser__photo { width: 600px; height: 440px; flex: none; } .about-teaser > .stack { flex: 1; } }
+
+/* ---- Testimonials ------------------------------------------------------- */
+.testimonial { margin: 0; padding: 28px; }
+.testimonial:hover { transform: none; box-shadow: none; }
+.testimonial__quote { margin: 0; font-size: var(--fs-h5); font-weight: 600; line-height: 1.4; }
+
+/* ---- CTA band ----------------------------------------------------------- */
+.cta-band { display: flex; flex-direction: column; align-items: flex-start; gap: 32px; }
+@media (min-width: 1024px) { .cta-band { flex-direction: row; align-items: center; gap: 40px; } .cta-band__copy { flex: 1; } }
+
+/* ---- Contact CTA -------------------------------------------------------- */
+.contact-cta { max-width: 640px; }
