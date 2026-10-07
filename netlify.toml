@@ -1,0 +1,13 @@
+[build]
+  command = "npm run build"
+  publish = "dist"
+
+[build.environment]
+  NODE_VERSION = "20"
+
+# Single-page app: serve index.html for every route so /services, /parts/…,
+# /cart etc. still work when someone refreshes the page or opens a direct link.
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
